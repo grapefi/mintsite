@@ -1,0 +1,18 @@
+{
+  "CONTRACT_ADDRESS": "0xdD2b11Ed9C203bd93FD0bb6067dA3f05e1247935",
+  "SCAN_LINK": "https://snowtrace.io/",
+  "NETWORK": {
+    "NAME": "Avalanche",
+    "SYMBOL": "Avax",
+    "ID": 43114
+  },
+  "NFT_NAME": "The Winery Collection",
+  "SYMBOL": "NFT",
+  "MAX_SUPPLY": 2700,
+  "WEI_COST": 10000000000000000,
+  "DISPLAY_COST": 1.5,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "NftTrade",
+  "MARKETPLACE_LINK": "#",
+  "SHOW_BACKGROUND": true
+}
