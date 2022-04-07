@@ -4,7 +4,8 @@ import { connect } from "./redux/blockchain/blockchainActions";
 import { fetchData } from "./redux/data/dataActions";
 import * as s from "./styles/globalStyles";
 import styled from "styled-components";
-
+import ReactDOM from 'react-dom';
+import Countdown from 'react-countdown';
 const truncate = (input, len) =>
   input.length > len ? `${input.substring(0, len)}...` : input;
 
@@ -75,6 +76,8 @@ export const StyledLogo = styled.img`
   transition: height 0.5s;
 `;
 
+
+
 export const StyledImg = styled.img`
   box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7);
   border: 0px dashed var(--secondary);
@@ -89,6 +92,8 @@ export const StyledImg = styled.img`
   }
   transition: width 0.5s;
 `;
+
+
 
 export const StyledLink = styled.a`
   color: var(--secondary);
@@ -152,7 +157,7 @@ function App() {
         dispatch(fetchData(blockchain.account));
       });
   };
-
+  const startDate = new Date('2022-4-7 22:00:00Z');
   const decrementMintAmount = () => {
     let newMintAmount = mintAmount - 1;
     if (newMintAmount < 1) {
@@ -196,6 +201,7 @@ function App() {
 
   return (
     <s.Screen>
+      
       <s.Container
         flex={1}
         ai={"center"}
@@ -203,7 +209,7 @@ function App() {
         image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
       >
         <a href="https://grapefinance.app/"><StyledLogo alt={"logo"} src={"/config/images/logo.png"} /></a>
-        
+       
         <ResponsiveWrapper flex={1} style={{ padding: 85 }} test>
         
           <s.SpacerLarge />
@@ -218,7 +224,11 @@ function App() {
               border: "0px dashed var(--secondary)",
               boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.6)",
             }}
-          ><s.TextTitle
+          >
+          <h2 style={{fontSize: '30px', marginTop: '20px'}}>Mint Starts in</h2>
+          <Countdown style={{marginTop: '20px'}} date={startDate} />
+
+            <s.TextTitle
           style={{
             textAlign: "center",
             fontSize: 50,

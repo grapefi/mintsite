@@ -123,10 +123,7 @@ table {
   border-spacing: 0;
 }
 
-@font-face {
-  font-family: "coder";
-  src: local("coder"), url(font.woff) format("woff");
-}
+
 
 @font-face {
   font-family: "superstar";
@@ -135,7 +132,7 @@ table {
 
 body {
   margin: 0;
-  font-family: "superstar", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+  font-family: "superstar", "monospace", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -163,6 +160,13 @@ body {
 
 html {
   background-color: "#930993";
+}
+
+span {
+  font-family: "monospace", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+    font-weight: bold;
+  font-size: 30px !important;
 }
 
 div {
