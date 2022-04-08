@@ -225,8 +225,8 @@ function App() {
               boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.6)",
             }}
           >
-          <h2 style={{fontSize: '30px', marginTop: '20px'}}>Mint Starts in</h2>
-          <Countdown style={{marginTop: '20px'}} date={startDate} />
+          <h2 style={{fontSize: '30px', marginTop: '20px'}}>Mint Sold Out!</h2>
+        
 
             <s.TextTitle
           style={{
